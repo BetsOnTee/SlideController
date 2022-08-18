@@ -37,7 +37,6 @@
 		86EF196B1FBB1E9E00BD8E73 /* LifecycleContentUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF19511FBB1E9E00BD8E73 /* LifecycleContentUIViewController.swift */; };
 		86EF196C1FBB1E9E00BD8E73 /* ColorPageLifeCycleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF19521FBB1E9E00BD8E73 /* ColorPageLifeCycleObject.swift */; };
 		86EF196D1FBB1E9E00BD8E73 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF19531FBB1E9E00BD8E73 /* RootRouter.swift */; };
-		86EF19891FBB20C100BD8E73 /* SlideController.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 86EF19831FBB209400BD8E73 /* SlideController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD2F936B1FF3F22900A65F48 /* CarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2F936A1FF3F22900A65F48 /* CarouselController.swift */; };
 		DD2F936D1FF3F23500A65F48 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2F936C1FF3F23500A65F48 /* CarouselView.swift */; };
 		DD2F93701FF3F27600A65F48 /* CircularTitleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2F936F1FF3F27600A65F48 /* CircularTitleItem.swift */; };
@@ -63,28 +62,7 @@
 			remoteGlobalIDString = 86473D481FBB150A00055999;
 			remoteInfo = Tests;
 		};
-		86EF19861FBB20A700BD8E73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 86EF197D1FBB209400BD8E73 /* SlideController.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 86473D3E1FBB150A00055999;
-			remoteInfo = SlideController;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		86EF19881FBB20B000BD8E73 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				86EF19891FBB20C100BD8E73 /* SlideController.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		86473D841FBB199600055999 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -367,12 +345,10 @@
 				86473D801FBB199600055999 /* Sources */,
 				86473D811FBB199600055999 /* Frameworks */,
 				86473D821FBB199600055999 /* Resources */,
-				86EF19881FBB20B000BD8E73 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				86EF19871FBB20A700BD8E73 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -386,7 +362,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = "Touchlane LLC";
 				TargetAttributes = {
 					86473D831FBB199600055999 = {
@@ -495,14 +471,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		86EF19871FBB20A700BD8E73 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SlideController;
-			targetProxy = 86EF19861FBB20A700BD8E73 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
 		86473D941FBB199600055999 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -518,6 +486,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -525,8 +494,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -552,7 +523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -575,6 +546,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -582,8 +554,10 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -603,7 +577,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -617,6 +591,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchlane.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -631,6 +606,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.touchlane.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
